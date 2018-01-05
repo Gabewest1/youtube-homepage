@@ -162,12 +162,16 @@ input, button {
 
 /* HEADER */
 #header {
+    background: white;
     color: rgba(17, 17, 17, .4);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 56px;
     padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     
     .left, .center, .right, .search-field {
         display: flex;
