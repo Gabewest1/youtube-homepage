@@ -4,7 +4,7 @@ body, html {
     font-family: 'Roboto', sans-serif;
 }
 
-input {
+input, button {
     font-family: inherit;
 }
 
@@ -49,7 +49,14 @@ input {
 .playlist {
     padding: 0px 10px;
     position: relative;
+    width: 428px;    
 
+    .close-icon {
+        height: 24px;
+        width: 24px;
+        margin-left: 5px;
+        fill: rgb( 136, 136, 136);
+    }
     .header {
         display: flex;
         justify-content: space-between;
@@ -58,6 +65,14 @@ input {
 
         .title {
             font-weight: 600;
+            
+            span {
+                position: relative;
+                left: 3px;
+                color: rgba(17, 17, 17, .4);
+                font-size: 13px;
+                font-weight: 300;
+            }
         }
     }
     .arrow {
@@ -80,25 +95,18 @@ input {
             height: 24px;
         }
     }
+    .show-more {
+        color: rgba(17, 17, 17, .4);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
     .videos {
         display: flex;
         margin: 0 -5px; 
         overflow: hidden;
-        width: 428px;
-
-        @media (min-width: 662px) {
-            width: 642px;
-        }
-
-        @media (min-width: 886px) {
-            width: 856px;
-        }
-        @media (min-width: 1090px) {
-            width: 1070px;
-        }
-        @media (min-width: 1300px) {
-            width: 1284px;
-        }
+        max-width: 100%;
     }
     .video_container {
         height: 205px;
@@ -113,8 +121,28 @@ input {
     i:hover {
         color: rgb(17, 17, 17);            
     }
+
+    @media (min-width: 662px) {
+        width: 642px;
+    }
+
+    @media (min-width: 886px) {
+        width: 856px;
+    }
+    @media (min-width: 1090px) {
+        width: 1070px;
+    }
+    @media (min-width: 1300px) {
+        width: 1284px;
+    }
+}
+.recommended {
+    .videos:first-of-type {
+        margin-bottom: 24px;
+    }
 }
 
+/* HEADER */
 #header {
     color: rgba(17, 17, 17, .4);
     display: flex;
@@ -142,6 +170,7 @@ input {
         flex: 1;
         padding: 0 15px;
         margin: 0 40px;
+        justify-content: flex-start;
 
         .search-field {
             width: 100%;
@@ -226,4 +255,20 @@ input {
             }
         }
     }
+}
+
+.subscribe-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    width: 151px;
+    height: 37px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }
