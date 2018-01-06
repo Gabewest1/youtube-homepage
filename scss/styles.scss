@@ -387,10 +387,39 @@ input, button {
     justify-content: center;
     position: relative;
     
+    #menu {
+        transform: translateX(-$menuWidth);
+        transition: transform .2s linear;        
+        z-index: 10;
+        position: absolute;
+        top: -$headerHeight;
+        left: 0;
+
+        .menu_header {
+            height: $headerHeight;
+            padding: 0 16px;
+        }
+
+        @media (min-width: 1293px) {
+            transition: none;
+
+            .menu_header {
+                opacity: 0;
+            }
+        }
+    }
+
+    #main-content {
+        width: 100%;
+    }
+
     &.active {
         
         #menu {
             transform: translateX(0);
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
         @media (max-width: 1292px) {
@@ -398,12 +427,12 @@ input, button {
                 content: "";
                 display: block;
                 position: absolute;
-                top: 0;
+                top: -$headerHeight;
                 left: 0;
                 background-color: rgba(0,0,0,.5);
-                height: 100%;
+                height: 5000px;
                 width: 100%;
-                z-index: 1;
+                z-index: 5;
             }
         }
         
@@ -426,31 +455,5 @@ input, button {
                 }
             }
         }
-    }
-
-    #menu {
-        transform: translateX(-$menuWidth);
-        transition: transform .2s linear;        
-        z-index: 1;
-        position: absolute;
-        top: -$headerHeight;
-        left: 0;
-
-        .menu_header {
-            height: $headerHeight;
-            padding: 0 16px;
-        }
-
-        @media (min-width: 1293px) {
-            transition: none;
-
-            .menu_header {
-                opacity: 0;
-            }
-        }
-    }
-
-    #main-content {
-        width: 100%;
     }
 }
