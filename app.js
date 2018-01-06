@@ -30,7 +30,7 @@ function toggleMenu() {
 }
 
 function closePlaylist($playlist) {
-    $playlist.classList.add("active")
+    $playlist.classList.add("close")
 }
 
 function findPlaylist($element) {

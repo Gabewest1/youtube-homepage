@@ -51,7 +51,11 @@ input, button {
 }
 .playlist {
     position: relative;
-    width: 428px;    
+    width: 428px;
+    
+    &.close * {
+        display: none !important; 
+    }
 
     .close-icon {
         height: 24px;
