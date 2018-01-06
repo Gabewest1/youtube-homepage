@@ -1,5 +1,9 @@
 const $removePlaylistBtn = Array.from(document.getElementsByClassName("close-icon"))
 const $showMoreVideosBtn = Array.from(document.getElementsByClassName("arrow"))
+const $menuBtns = Array.from(document.getElementsByClassName("bar-icon"))
+const $menu = document.getElementById("pusher")
+const $mainContent = document.getElementById("main-content")
+
 console.log($removePlaylistBtn)
 
 $removePlaylistBtn.forEach($btn => {
@@ -17,6 +21,13 @@ $showMoreVideosBtn.forEach($btn => {
         showMoreVideos($playlist)
     })
 })
+
+$menuBtns.forEach(btn => btn.addEventListener("click", toggleMenu))
+
+function toggleMenu() {
+    console.log("AYYY I CLICKED")
+    $menu.classList.toggle("active")
+}
 
 function closePlaylist($playlist) {
     $playlist.classList.add("active")
