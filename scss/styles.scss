@@ -313,7 +313,7 @@ input, button {
 /* MENU */
 #menu {
     background: #f5f5f5;
-    width: $menuWidth;
+    min-width: $menuWidth;
     height: 100vh;
 
     main {
