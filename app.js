@@ -1,7 +1,7 @@
 const $removePlaylistBtn = Array.from(document.getElementsByClassName("close-icon"))
 const $showMoreVideosBtn = Array.from(document.querySelectorAll(".arrow.right"))
 const $showLessVideosBtn = Array.from(document.querySelectorAll(".arrow.left"))
-const $menuBtns = Array.from(document.getElementsByClassName("bar-icon"))
+const $toggleMenuBtns = Array.from(document.getElementsByClassName("bar-icon"))
 const $menu = document.getElementById("pusher")
 const $mainContent = document.getElementById("main-content")
 const $undoClosedPlaylist = document.getElementsByClassName("undo")[0]
@@ -30,7 +30,7 @@ $showMoreVideosBtn.forEach($btn => {
     })
 })
 
-$menuBtns.forEach(btn => btn.addEventListener("click", toggleMenu))
+$toggleMenuBtns.forEach(btn => btn.addEventListener("click", toggleMenu))
 
 $undoClosedPlaylist.addEventListener("click", function() {
     const $playlist = findPlaylist(this)
