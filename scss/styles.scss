@@ -479,12 +479,18 @@ input, button {
 
 .closed-playlist {
     border: solid thin #a4c6fd;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
 
     .message {
-        
+        margin: 4px 0;
     }
 
     .undo {
-
+        color: rgb(17, 17, 17);
+        border: none;
+        background-color: transparent;
+        padding: 10px 16px;
     }
 }
