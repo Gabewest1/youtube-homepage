@@ -5,6 +5,7 @@ const $toggleMenuBtns = Array.from(document.getElementsByClassName("bar-icon"))
 const $menu = document.getElementById("pusher")
 const $mainContent = document.getElementById("main-content")
 const $undoClosedPlaylist = document.getElementsByClassName("undo")[0]
+const $expandRecommendSectionBtn = document.getElementById("expand-recommended")
 
 $removePlaylistBtn.forEach($btn => {
     $btn.addEventListener("click", () => {
@@ -36,6 +37,12 @@ $undoClosedPlaylist.addEventListener("click", function() {
     const $playlist = findPlaylist(this)
     console.log("OPENING PLAYLIST:", $playlist)
     openPlaylist($playlist)
+})
+
+$expandRecommendSectionBtn.addEventListener("click", function() {
+    const $playlist = findPlaylist(this)
+
+    $playlist.classList.toggle("expand")
 })
 
 function toggleMenu() {

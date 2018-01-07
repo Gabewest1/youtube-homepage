@@ -61,6 +61,15 @@ input, button {
             display: none;
         }
     }
+
+    &.expand {
+        #expand-recommended {
+            display: none;
+        }
+        .videos--show-more {
+            display: block;
+        }
+    }
     .closed-playlist {
         display: none;
     }
@@ -116,6 +125,9 @@ input, button {
             left: 0;
             opacity: 0;            
         }
+    }
+    .videos--show-more {
+        display: none;
     }
     &.active {
         .videos {
