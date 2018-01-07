@@ -474,6 +474,18 @@ input, button {
                 }
             }
         }
+
+        @media (min-width: 1390px) {
+            #main-content .playlist {
+                width: 1070px;
+            }
+        }
+
+        @media (min-width: 1610px) {
+            #main-content .playlist {
+                width: 1288px;
+            }
+        }
     }
 }
 
