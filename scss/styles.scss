@@ -459,7 +459,7 @@ input, button {
         @media (min-width: 1293px) {
             #menu {
                 position: relative;
-                top: $headerHeight;
+                top: 0;
                 transform: translateX(0);
                 transition: none;
 
