@@ -1,16 +1,23 @@
 const $removePlaylistBtn = Array.from(document.getElementsByClassName("close-icon"))
-const $showMoreVideosBtn = Array.from(document.getElementsByClassName("arrow"))
+const $showMoreVideosBtn = Array.from(document.querySelectorAll(".arrow.right"))
+const $showLessVideosBtn = Array.from(document.querySelectorAll(".arrow.left"))
 const $menuBtns = Array.from(document.getElementsByClassName("bar-icon"))
 const $menu = document.getElementById("pusher")
 const $mainContent = document.getElementById("main-content")
-
-console.log($removePlaylistBtn)
 
 $removePlaylistBtn.forEach($btn => {
     $btn.addEventListener("click", () => {
         const $playlist = findPlaylist($btn)
         console.log("CLOSING PLAYLIST:", $playlist)
         closePlaylist($playlist)
+    })
+})
+
+$showLessVideosBtn.forEach($btn => {
+    $btn.addEventListener("click", () => {
+        const $playlist = findPlaylist($btn)
+        console.log("CLOSING PLAYLIST:", $playlist)
+        showLessVideos($playlist)
     })
 })
 
@@ -25,7 +32,6 @@ $showMoreVideosBtn.forEach($btn => {
 $menuBtns.forEach(btn => btn.addEventListener("click", toggleMenu))
 
 function toggleMenu() {
-    console.log("AYYY I CLICKED")
     $menu.classList.toggle("active")
 }
 
@@ -50,7 +56,9 @@ function findPlaylist($element) {
 }
 
 function showMoreVideos($playlist) {
-    const $videos = $playlist.getElementsByClassName("videos")[0]
-    console.log("VIDEOS:", $videos)
-    $videos.classList.add("active")
+    $playlist.classList.add("active")
+}
+
+function showLessVideos($playlist) {
+    $playlist.classList.remove("active")
 }
