@@ -53,10 +53,17 @@ input, button {
     position: relative;
     width: 428px;
     
-    &.close * {
-        display: none !important; 
+    &.close {
+        .closed-playlist {
+            display: block; 
+        }
+        .opened-playlist {
+            display: none;
+        }
     }
-
+    .closed-playlist {
+        display: none;
+    }
     .close-icon {
         height: 24px;
         width: 24px;
@@ -467,5 +474,17 @@ input, button {
                 }
             }
         }
+    }
+}
+
+.closed-playlist {
+    border: solid thin #a4c6fd;
+
+    .message {
+        
+    }
+
+    .undo {
+
     }
 }
