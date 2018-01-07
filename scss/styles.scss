@@ -65,6 +65,7 @@ input, button {
         display: none;
     }
     .close-icon {
+        cursor: pointer;
         height: 24px;
         width: 24px;
         margin-left: 5px;
@@ -308,6 +309,7 @@ input, button {
 .subscribe-btn {
     background-color: red;
     color: white;
+    cursor: pointer;
     border: none;
     border-radius: 2px;
     font-weight: 500;
@@ -500,9 +502,10 @@ input, button {
     }
 
     .undo {
-        color: rgb(17, 17, 17);
         border: none;
         background-color: transparent;
+        color: rgb(17, 17, 17);
+        cursor: pointer;
         padding: 10px 16px;
     }
 }
