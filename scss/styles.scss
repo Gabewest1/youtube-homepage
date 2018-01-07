@@ -437,8 +437,8 @@ input, button {
         #menu {
             transform: translateX(0);
             position: fixed;
-            top: 0;
             left: 0;
+            top: 0;
         }
 
         @media (max-width: 1292px) {
@@ -459,7 +459,7 @@ input, button {
         @media (min-width: 1293px) {
             #menu {
                 position: relative;
-                top: 0;
+                top: $headerHeight;
                 transform: translateX(0);
                 transition: none;
 
