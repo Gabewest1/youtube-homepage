@@ -274,8 +274,9 @@ input, button {
 
         
         .search-icon, .upload-icon, .menu-icon, .notification-icon, .profile-icon {
-            height: 40px;
-            width: 40px;
+            fill: rgba(17, 17, 17, .4);
+            height: 24px;
+            width: 24px;
             padding: $padding;
             display: flex;
             align-items: center;
@@ -292,7 +293,8 @@ input, button {
             
             img {
                 border-radius: 50%;                
-                max-width: 100%;
+                width: 32px;
+                height: 32px;
             }
         }
 
