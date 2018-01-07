@@ -286,6 +286,7 @@ input, button {
 
         
         .search-icon, .upload-icon, .menu-icon, .notification-icon, .profile-icon {
+            cursor: pointer;
             fill: rgba(17, 17, 17, .4);
             height: 24px;
             width: 24px;
@@ -404,6 +405,7 @@ input, button {
 
 .bar-icon {
     color: rgba(17, 17, 17, .4);
+    cursor: pointer;
     fill: rgba(17, 17, 17, .4);
     width: 24px;
     height: 24px;
