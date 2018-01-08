@@ -49,6 +49,16 @@ input, button {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .playlist {
+        border-bottom: solid thin rgba(0, 0, 0, .04);
+        padding-bottom: 10px;
+    }
+
+    .playlist:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 }
 .playlist {
     position: relative;
@@ -446,10 +456,6 @@ input, button {
     font-size: 18px !important;
     margin-right: 16px;
     padding: 8px;
-}
-
-#main-content {
-    background-color: #fafafa;
 }
 
 #pusher {
