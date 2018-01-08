@@ -8,6 +8,7 @@ const $undoClosedPlaylist = document.getElementsByClassName("undo")[0]
 const $expandRecommendSectionBtn = document.getElementById("expand-recommended")
 const $searchBtns = Array.from(document.getElementsByClassName("search-icon"))
 const $headers = document.getElementById("headers")
+const $quitSearchBtn = document.getElementById("quit-search")
 let isSmallHeaderResizeHandlerSet = false
 
 $removePlaylistBtn.forEach($btn => {
@@ -49,6 +50,8 @@ $expandRecommendSectionBtn.addEventListener("click", function() {
 })
 console.log("SEARCH:", $searchBtns)
 $searchBtns.forEach($btn => $btn.addEventListener("click", renderHeader.bind($btn, true)))
+
+$quitSearchBtn.addEventListener("click", () => $headers.classList.remove("active"))
 
 function toggleMenu() {
     $menu.classList.toggle("active")

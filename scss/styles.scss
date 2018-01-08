@@ -340,7 +340,7 @@ input, button {
         }
     }
     &.small {
-        .arrow-icon {
+        #quit-search {
             margin-right: 8px;
         }
         .search-field {
@@ -444,7 +444,7 @@ input, button {
 
 }
 
-.bar-icon, .arrow-icon {
+.bar-icon, #quit-search {
     color: rgba(17, 17, 17, .4);
     cursor: pointer;
     fill: rgba(17, 17, 17, .4);
