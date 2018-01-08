@@ -223,6 +223,8 @@ input, button {
 }
 
 #headers {
+    padding: 0 8px;
+
     .small {
         display: none;
     }
@@ -236,6 +238,10 @@ input, button {
             display: flex;
         }
     }
+
+    @media (min-width: 657px) {
+        padding: 0 16px;
+    }
 }
 
 /* HEADER */
@@ -246,7 +252,6 @@ input, button {
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    padding: 0 8px;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -303,7 +308,7 @@ input, button {
                 align-items: center;
                 justify-content: center;
                 height: 96%;
-                width: 51px;
+                width: 65px;
                 padding: 1px 6px;
                 font-size: 13.3333px;
             }
@@ -351,6 +356,7 @@ input, button {
         }
     }
     &.small {
+
         #quit-search {
             margin-right: 8px;
         }
