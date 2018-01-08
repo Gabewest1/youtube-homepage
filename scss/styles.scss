@@ -300,17 +300,16 @@ input, button {
     }
     .right {
         font-size: 20px;
-        $padding: 10px;
         width: 204px;
         justify-content: space-between;
 
         
-        .search-icon, .upload-icon, .menu-icon, .notification-icon, .profile-icon {
+        .yt-icon {
             cursor: pointer;
             fill: rgba(17, 17, 17, .4);
             height: 24px;
             width: 24px;
-            padding: $padding;
+            // padding: 8px;
             display: flex;
             align-items: center;
         }
@@ -319,16 +318,9 @@ input, button {
             display: none;
         }
         .profile-icon {
-            box-sizing: border-box;
-            height: 40px;
-            width: 60px;
-            padding: $padding;  
-            
-            img {
-                border-radius: 50%;                
-                width: 32px;
-                height: 32px;
-            }
+            padding: 10px 16px;  
+            color: red;
+            font-size: 14px;
         }
 
         @media (max-width: 661px) {
