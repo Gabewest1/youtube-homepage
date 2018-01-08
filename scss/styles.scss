@@ -408,14 +408,22 @@ input, button {
         flex-grow: 1;
         height: 100%;
     }
-    ul {
-        list-style: none;
+    section {
+        border-bottom: solid thin rgba(17, 17, 17, .04);
         padding: 12px 0;
-        margin: 0;
-
+        
         &:first-child {
             padding-top: 0;
         }
+    
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     li {
@@ -584,10 +592,16 @@ input, button {
     }
 }
 
+
+/* UTILITY CLASSES */
 .img-responsive {
     max-width: 100%;
 }
 
 .circle {
     border-radius: 50%;
+}
+
+.text-center {
+    text-align: center;
 }
