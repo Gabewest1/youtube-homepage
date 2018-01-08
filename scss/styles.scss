@@ -398,6 +398,10 @@ input, button {
         list-style: none;
         padding: 12px 0;
         margin: 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
     }
 
     li {
