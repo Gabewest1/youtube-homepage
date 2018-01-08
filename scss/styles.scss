@@ -24,8 +24,9 @@ input, button {
     .title {
         color: rgb(17, 17, 17);
         margin: 0;
-        font-weight: 500;
+        font-weight: 600;
         padding-top: 5px;
+        font-size: 14px;
     }
 
     .meta {
@@ -35,7 +36,7 @@ input, button {
     }
     .username {
         color: rgba(17, 17, 17, .6);
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .stats {
