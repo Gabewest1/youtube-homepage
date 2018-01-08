@@ -101,14 +101,14 @@ function renderHeader(shouldRenderSmallHeader = false) {
         //back into desktop mode.
         if (!isSmallHeaderResizeHandlerSet) {
             isSmallHeaderResizeHandlerSet = true
-            window.addEventListener("resize", renderHeader)
+            window.addEventListener("resize", () => renderHeader())
         }
     } else {
         $headers.classList.remove("active")
 
         if (isSmallHeaderResizeHandlerSet) {
             isSmallHeaderResizeHandlerSet = false
-            window.removeEventListener("resize", renderHeader)
+            window.removeEventListener("resize", () => renderHeader())
         }
     }
 }
