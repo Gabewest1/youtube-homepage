@@ -6,6 +6,9 @@ const $menu = document.getElementById("pusher")
 const $mainContent = document.getElementById("main-content")
 const $undoClosedPlaylist = document.getElementsByClassName("undo")[0]
 const $expandRecommendSectionBtn = document.getElementById("expand-recommended")
+const $searchBtns = Array.from(document.getElementsByClassName("search-icon"))
+const $headers = document.getElementById("headers")
+let isSmallHeaderResizeHandlerSet = false
 
 $removePlaylistBtn.forEach($btn => {
     $btn.addEventListener("click", () => {
@@ -44,6 +47,8 @@ $expandRecommendSectionBtn.addEventListener("click", function() {
 
     $playlist.classList.toggle("expand")
 })
+console.log("SEARCH:", $searchBtns)
+$searchBtns.forEach($btn => $btn.addEventListener("click", renderHeader.bind($btn, true)))
 
 function toggleMenu() {
     $menu.classList.toggle("active")
@@ -79,4 +84,28 @@ function showMoreVideos($playlist) {
 
 function showLessVideos($playlist) {
     $playlist.classList.remove("active")
+}
+
+function renderHeader(shouldRenderSmallHeader = false) {
+    console.log("AYYY:", shouldRenderSmallHeader)
+    const desktopBreakpoint = 662
+    shouldRenderSmallHeader = shouldRenderSmallHeader || $headers.classList.contains("active")
+
+    if (shouldRenderSmallHeader && window.innerWidth < desktopBreakpoint) {
+        $headers.classList.add("active")
+
+        //Need to set a handler to return the header to its default version if the client scrolls
+        //back into desktop mode.
+        if (!isSmallHeaderResizeHandlerSet) {
+            isSmallHeaderResizeHandlerSet = true
+            window.addEventListener("resize", renderHeader)
+        }
+    } else {
+        $headers.classList.remove("active")
+
+        if (isSmallHeaderResizeHandlerSet) {
+            isSmallHeaderResizeHandlerSet = false
+            window.removeEventListener("resize", renderHeader)
+        }
+    }
 }

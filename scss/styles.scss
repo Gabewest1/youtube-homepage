@@ -203,15 +203,31 @@ input, button {
     cursor: pointer;
 }
 
+#headers {
+    .small {
+        display: none;
+    }
+
+    &.active {
+        .header {
+            display: none;
+        }
+
+        .small {
+            display: flex;
+        }
+    }
+}
+
 /* HEADER */
-#header {
+.header {
     background: white;
     color: rgba(17, 17, 17, .4);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    padding: 0 16px;
+    padding: 0 8px;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -323,8 +339,18 @@ input, button {
             }
         }
     }
+    &.small {
+        .arrow-icon {
+            margin-right: 8px;
+        }
+        .search-field {
+            display: flex;
+        }
+        .center {
+            padding: 0;
+        }
+    }
 }
-
 .subscribe-btn {
     background-color: red;
     color: white;
@@ -418,7 +444,7 @@ input, button {
 
 }
 
-.bar-icon {
+.bar-icon, .arrow-icon {
     color: rgba(17, 17, 17, .4);
     cursor: pointer;
     fill: rgba(17, 17, 17, .4);
