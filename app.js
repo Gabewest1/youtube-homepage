@@ -4,7 +4,7 @@ const $showLessVideosBtn = Array.from(document.querySelectorAll(".arrow.left"))
 const $toggleMenuBtns = Array.from(document.getElementsByClassName("bar-icon"))
 const $menu = document.getElementById("pusher")
 const $mainContent = document.getElementById("main-content")
-const $undoClosedPlaylist = document.getElementsByClassName("undo")[0]
+const $undoClosedPlaylistBtns = Array.from(document.getElementsByClassName("undo"))
 const $expandRecommendSectionBtn = document.getElementById("expand-recommended")
 const $searchBtns = Array.from(document.getElementsByClassName("search-icon"))
 const $headers = document.getElementById("headers")
@@ -37,10 +37,12 @@ $showMoreVideosBtn.forEach($btn => {
 
 $toggleMenuBtns.forEach(btn => btn.addEventListener("click", toggleMenu))
 
-$undoClosedPlaylist.addEventListener("click", function() {
-    const $playlist = findPlaylist(this)
-    console.log("OPENING PLAYLIST:", $playlist)
-    openPlaylist($playlist)
+$undoClosedPlaylistBtns.forEach($btn => {
+    $btn.addEventListener("click", function() {
+        const $playlist = findPlaylist(this)
+        console.log("OPENING PLAYLIST:", $playlist)
+        openPlaylist($playlist)
+    })
 })
 
 $expandRecommendSectionBtn.addEventListener("click", function() {
