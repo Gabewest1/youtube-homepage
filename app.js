@@ -9,6 +9,7 @@ const $expandRecommendSectionBtn = document.getElementById("expand-recommended")
 const $searchBtns = Array.from(document.getElementsByClassName("search-icon"))
 const $headers = document.getElementById("headers")
 const $quitSearchBtn = document.getElementById("quit-search")
+const $subscribeBtns = Array.from(document.querySelectorAll(".subscribe-btn"))
 let isSmallHeaderResizeHandlerSet = false
 
 $removePlaylistBtn.forEach($btn => {
@@ -54,6 +55,22 @@ console.log("SEARCH:", $searchBtns)
 $searchBtns.forEach($btn => $btn.addEventListener("click", renderHeader.bind($btn, true)))
 
 $quitSearchBtn.addEventListener("click", () => $headers.classList.remove("active"))
+
+$subscribeBtns.forEach($btn => $btn.addEventListener("click", handleSubscribeButtonClick))
+
+function handleSubscribeButtonClick(e) {
+    const $btn = e.target
+
+    if ($btn.classList.contains("active")) {
+        const numSubscribers = $btn.textContent.replace("SUBSCRIBED", "").trim()
+        $btn.classList.remove("active")
+        $btn.textContent = "SUBSCRIBE" + " " + numSubscribers
+    } else {
+        const numSubscribers = $btn.textContent.replace("SUBSCRIBE", "").trim()        
+        $btn.classList.add("active")
+        $btn.textContent = "SUBSCRIBED" + " " + numSubscribers
+    }
+}
 
 function toggleMenu() {
     $menu.classList.toggle("active")

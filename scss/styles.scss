@@ -20,7 +20,7 @@ input, button {
     .video, .title, .username, .stats {
         cursor: pointer;
     }
-    
+
     .video {
         max-width: 100%;
     }
@@ -379,10 +379,15 @@ input, button {
     cursor: pointer;
     border: none;
     border-radius: 2px;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 14px;
     width: 151px;
     height: 37px;
+
+    &.active {
+        background-color: rgb(238, 238, 238);
+        color: rgba(17, 17, 17, .6);
+    }
 }
 
 .flex {
