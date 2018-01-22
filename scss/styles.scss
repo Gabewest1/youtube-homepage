@@ -17,6 +17,10 @@ input, button {
     max-width: 210px;
     font-family: 'Roboto', sans-serif;
 
+    .video, .title, .username, .stats {
+        cursor: pointer;
+    }
+    
     .video {
         max-width: 100%;
     }
@@ -62,7 +66,7 @@ input, button {
 .playlist {
     position: relative;
     width: 428px;
-    
+
     &.close {
         .closed-playlist {
             display: block; 
